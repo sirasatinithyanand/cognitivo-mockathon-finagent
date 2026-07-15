@@ -34,7 +34,7 @@ docker run --rm --gpus all --ipc=host \
   -e LORA_RANK=8 \
   -e LR=2e-4 \
   "${NEMO_IMAGE}" \
-  python /workspace/training/train_1node.py \
+  python /workspace/train_1node.py \
   2>&1 | tee "${LOG}"
 
 echo "=== Smoke test finished ==="

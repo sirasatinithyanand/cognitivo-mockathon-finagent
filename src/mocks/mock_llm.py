@@ -45,6 +45,26 @@ def health():
     return {"status": "ok"}
 
 
+def _sentiment_reply(prompt: str) -> str | None:
+    lower_prompt = prompt.lower()
+    if "travel stocks take off on vaccine rollout" in lower_prompt:
+        return (
+            "The article reads as positive sentiment and points to likely upward momentum for ASX travel shares "
+            "as vaccine-led reopening optimism improves the sector outlook."
+        )
+    if "why investors don't believe the rba on interest rates" in lower_prompt:
+        return (
+            "The article reads as mixed-to-negative sentiment, with broad ASX sentiment likely mixed to down and "
+            "rate-sensitive shares under pressure as investors doubt the RBA's rate guidance."
+        )
+    if "energy stocks shine as vaccines fuel oil rally" in lower_prompt:
+        return (
+            "The article reads as positive sentiment and points to likely upward momentum for ASX energy shares "
+            "as vaccine-led reopening hopes and oil strength support the sector."
+        )
+    return None
+
+
 @app.post("/v1/chat/completions")
 def chat(req: ChatRequest):
     tool_results = [m for m in req.messages if m.get("role") == "tool"]
@@ -84,6 +104,15 @@ def chat(req: ChatRequest):
             f"already priced into the refinancing schedule. Sources: {cites}."
         )
         return _resp({"role": "assistant", "content": content}, req.model)
+
+    prompt = ""
+    for message in reversed(req.messages):
+        if message.get("role") == "user":
+            prompt = message.get("content") or ""
+            break
+    sentiment_reply = _sentiment_reply(prompt)
+    if sentiment_reply:
+        return _resp({"role": "assistant", "content": sentiment_reply}, req.model)
 
     return _resp({"role": "assistant",
                   "content": "Mock brain online. Ask a finance question with tools enabled."},

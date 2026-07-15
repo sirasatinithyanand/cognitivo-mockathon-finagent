@@ -19,7 +19,7 @@ MODEL_DIR="${MODEL_DIR:-/home/cognitivo/local-llm-setup/models}"
 WORKSPACE="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 LOG_ATA0="/tmp/nemo_ata0.log"
 LOG_ATA1="/tmp/nemo_ata1.log"
-PYTHON_SCRIPT="/workspace/training/train_2node.py"
+PYTHON_SCRIPT="/workspace/train_2node.py"
 
 MODEL_PATH="${MODEL_PATH:-/models/Llama-3.1-Nemotron-Nano-8B-v1}"
 OUTPUT_DIR="${OUTPUT_DIR:-/models/checkpoints/nemotron8b-finance-lora}"

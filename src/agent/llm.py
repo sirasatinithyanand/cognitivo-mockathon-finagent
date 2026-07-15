@@ -28,6 +28,10 @@ def chat(messages: list[dict], tools: list[dict] | None = None, model: str | Non
         active_tools = None
         tool_choice = None
 
+    # Disable Qwen3 "thinking" for the tool-calling step. Left on, the A3B brain
+    # spends the whole token budget emitting <think> prose and never produces the
+    # structured tool_call (finish_reason=length, steps=0). The loop itself supplies
+    # the multi-step structure, so each reason turn only needs to pick the next tool.
     return get_client().chat.completions.create(
         model=model or config.BRAIN_MODEL,
         messages=messages,
@@ -35,4 +39,5 @@ def chat(messages: list[dict], tools: list[dict] | None = None, model: str | Non
         tool_choice=tool_choice,
         temperature=0.1,
         max_tokens=max_tokens,
+        extra_body={"chat_template_kwargs": {"enable_thinking": False}},
     )

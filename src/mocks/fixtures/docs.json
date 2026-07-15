@@ -1,5 +1,35 @@
 [
   {
+    "id": "afr-sentiment-20210223",
+    "text": "Travel stocks take off on vaccine rollout. Investors are betting that the vaccine rollout has paved the way for a resumption of travel, putting pressure on states and territories to commit to keeping borders open to stoke confidence. Three of the five best performers among the S&P/ASX 200 yesterday were travel companies. Webjet rose 8.9 per cent, Corporate Travel Management gained 8.2 per cent and Flight Centre rose 7.1 per cent. Karen Jorritsma, head of equities at RBC Capital Markets in Australia, said the jumps were attributable to reopening optimism as the vaccine rollout accelerates.",
+    "source": "AFR 2021-02-23",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20210223",
+      "headline": "Travel stocks take off on vaccine rollout"
+    }
+  },
+  {
+    "id": "afr-sentiment-20211125",
+    "text": "Why investors don't believe the RBA on interest rates. Monetary policy: nursing multibillion-dollar losses after being wrong-footed on bond yields, investors no longer trust the RBA's interest rate guidance. The Reserve Bank of Australia insists that interest rates are likely to be anchored near zero until around 2024, but money markets are pricing in about four cash rate increases totalling 1 per cent next year. There has rarely, if ever, in Australia's financial history been such a disconnect between the RBA and bond markets. Rate-sensitive shares are under pressure as the market doubts the central bank's stance.",
+    "source": "AFR 2021-11-25",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20211125",
+      "headline": "Why investors don't believe the RBA on interest rates"
+    }
+  },
+  {
+    "id": "afr-sentiment-20201128",
+    "text": "Energy stocks shine as vaccines fuel oil rally. Petroleum: next week's meeting of the world's largest oil producers to consider extending supply cuts will be key to whether Australian energy stocks can build on their 30 per cent rally this month. The gathering of the Organisation of Petroleum Exporting Countries (OPEC) in Vienna comes as oil prices have been lifted by positive progress on a vaccine, boosting hopes that international travel could restart in 2021. Over the last four weeks, the price of Brent crude has risen 27.4 per cent to $US47.72, supporting a positive outlook for ASX energy shares.",
+    "source": "AFR 2020-11-28",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20201128",
+      "headline": "Energy stocks shine as vaccines fuel oil rally"
+    }
+  },
+  {
     "id": "fin-001",
     "text": "BHP half-year results: underlying EBITDA of US$13.9bn, net debt within target range. Management flags iron ore price sensitivity and notes exposure to interest rate movements on the balance sheet refinancing due next year.",
     "source": "BHP-HY-report.pdf p.4",

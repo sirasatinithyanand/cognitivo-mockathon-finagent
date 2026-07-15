@@ -1,0 +1,27 @@
+Evaluating 50 samples...
+  Base model: nemotron-8b-base @ http://10.0.1.11:8001/v1
+  Finetuned:  nemotron-8b-finance  @ http://10.0.1.11:8001/v1
+
+  [10/50] base=0.326 ft=0.404
+  [20/50] base=0.250 ft=0.318
+  [30/50] base=0.283 ft=0.325
+  [40/50] base=0.261 ft=0.251
+  [50/50] base=0.260 ft=0.341
+
+============================================================
+EVALUATION RESULTS
+============================================================
+Metric                        Base  Finetuned    Delta
+------------------------------------------------------------
+composite                    0.288      0.379   +0.091 ✓
+expected_overlap             0.292      0.481   +0.189 ✓
+length_score                 0.995      0.963   -0.032 ✗
+macro_keywords               0.142      0.232   +0.090 ✓
+risk_keywords                0.022      0.068   +0.046 ✓
+sentiment_keywords           0.078      0.086   +0.008 ✓
+technical_keywords           0.050      0.177   +0.127 ✓
+============================================================
+
+Overall improvement: +31.6% on composite score
+
+Full report saved to data/eval_report.json

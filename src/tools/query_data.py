@@ -203,7 +203,7 @@ def _annual_return(records, ticker, year) -> float | None:
         return None
     rows.sort(key=lambda r: r["date"])
     start, end = rows[0]["close"], rows[-1]["close"]
-    return round((end - start) / start * 100, 4) if start else None
+    return round((end - start) / start * 100, 2) if start else None
 
 
 def _asx_to_json(r: dict) -> dict:
@@ -554,7 +554,7 @@ def query_data(
                 if ret is not None:
                     ranks.append({"ticker": tk, "annual_return_pct": ret})
             ranks.sort(key=lambda x: x["annual_return_pct"], reverse=True)
-            avg = round(sum(r["annual_return_pct"] for r in ranks) / len(ranks), 4) if ranks else None
+            avg = round(sum(r["annual_return_pct"] for r in ranks) / len(ranks), 2) if ranks else None
             return {
                 "best": ranks[0] if ranks else None,
                 "worst": ranks[-1] if ranks else None,
@@ -644,7 +644,7 @@ def query_data(
                         peak_price = cur_peak
                 results.append({
                     "ticker": tk,
-                    "max_drawdown_pct": round(max_dd, 4),
+                    "max_drawdown_pct": round(max_dd, 2),
                     "peak_date": str(peak_date),
                     "trough_date": str(trough_date),
                     "peak_price": round(peak_price, 4),
@@ -671,11 +671,15 @@ def query_data(
                 r1 = next((r for r in recs if r["date"] >= df_d), None)
                 r2 = next((r for r in recs if r["date"] >= dt_d), None)
                 if r1 and r2 and r1 is not r2:
-                    ret = round((r2["close"] - r1["close"]) / r1["close"] * 100, 4)
-                    results.append({"ticker": tk, "return_pct": ret,
+                    ret_raw = (r2["close"] - r1["close"]) / r1["close"] * 100
+                    results.append({"ticker": tk, "return_pct": round(ret_raw, 2), "_raw": ret_raw,
                                     "from_date": str(r1["date"]), "to_date": str(r2["date"])})
             results.sort(key=lambda x: x["ticker"])
-            basket_avg = round(sum(r["return_pct"] for r in results) / len(results), 4) if results else None
+            # Average the UNROUNDED per-ticker returns, then round once (rounding each
+            # ticker first would drift the basket, e.g. 2.885 -> 2.89 instead of 2.88).
+            basket_avg = round(sum(r["_raw"] for r in results) / len(results), 2) if results else None
+            for r in results:
+                r.pop("_raw", None)
             return {
                 "basket_avg_return_pct": basket_avg,
                 "per_ticker": results,  # compact — just ticker + return_pct
@@ -692,7 +696,7 @@ def query_data(
             for tk, recs in by_ticker.items():
                 recs.sort(key=lambda r: r["date"])
                 start, end = recs[0]["close"], recs[-1]["close"]
-                ret = round((end - start) / start * 100, 4) if start else None
+                ret = round((end - start) / start * 100, 2) if start else None
                 results.append({
                     "ticker": tk, "return_pct": ret,
                     "start_price": round(start, 4), "start_date": str(recs[0]["date"]),
@@ -700,9 +704,9 @@ def query_data(
                 })
             results.sort(key=lambda x: x["return_pct"] if x["return_pct"] is not None else -999, reverse=True)
             valid_rets = sorted([r["return_pct"] for r in results if r["return_pct"] is not None])
-            avg = round(sum(valid_rets) / len(valid_rets), 4) if valid_rets else None
+            avg = round(sum(valid_rets) / len(valid_rets), 2) if valid_rets else None
             n = len(valid_rets)
-            median = round((valid_rets[n//2] if n % 2 == 1 else (valid_rets[n//2-1] + valid_rets[n//2]) / 2), 4) if n else None
+            median = round((valid_rets[n//2] if n % 2 == 1 else (valid_rets[n//2-1] + valid_rets[n//2]) / 2), 2) if n else None
             positive_count = sum(1 for r in valid_rets if r > 0)
             negative_count = sum(1 for r in valid_rets if r < 0)
             return {

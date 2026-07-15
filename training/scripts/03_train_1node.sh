@@ -38,7 +38,7 @@ nohup docker run --rm --gpus all --ipc=host \
   -e LORA_RANK="${LORA_RANK}" \
   -e LR="${LR}" \
   "${NEMO_IMAGE}" \
-  python /workspace/training/train_1node.py \
+  python /workspace/train_1node.py \
   > "${LOG}" 2>&1 &
 
 TRAIN_PID=$!

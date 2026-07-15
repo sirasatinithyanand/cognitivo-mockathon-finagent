@@ -19,7 +19,7 @@ MODEL_DIR="${MODEL_DIR:-/home/cognitivo/local-llm-setup/models}"
 WORKSPACE="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 LOG_ATA0="/tmp/smoke2node_ata0.log"
 LOG_ATA1="/tmp/smoke2node_ata1.log"
-PYTHON_SCRIPT="/workspace/training/train_2node.py"
+PYTHON_SCRIPT="/workspace/train_2node.py"
 
 echo "=== 2-node smoke test: Llama-3.2-1B, FSDP2, 50 steps ==="
 echo "  Workspace:  ${WORKSPACE}"

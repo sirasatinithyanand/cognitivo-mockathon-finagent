@@ -31,10 +31,17 @@ def query(q: Query):
     if not q.question.strip():
         raise HTTPException(status_code=400, detail="question is empty")
     state = run(q.question)
+    # Map the internal trace ({name, args, ms, summary}) to the documented
+    # answer.json shape ({tool, args, result}) — only `answer` is graded, but
+    # keep the tool-usage trace consistent with the submission spec.
+    trace = [
+        {"tool": t.get("name", ""), "args": t.get("args", {}), "result": t.get("summary", "")}
+        for t in state.get("tool_trace", [])
+    ]
     return {
         "answer": state.get("answer", ""),
         "steps": state.get("steps", 0),
-        "tool_trace": state.get("tool_trace", []),
+        "tool_trace": trace,
     }
 
 

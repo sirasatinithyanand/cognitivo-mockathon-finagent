@@ -48,7 +48,7 @@ ssh -T ata1 "nohup docker run --rm --gpus all --ipc=host \
   -e GRAD_ACCUM=${GRAD_ACCUM} \
   -e LR=${LR} \
   ${NEMO_IMAGE} \
-  python /workspace/training/train_1node.py \
+  python /workspace/train_1node.py \
   > ${LOG_ATA1} 2>&1 &
 echo \"nemo_8b_test started (PID \$!)\"
 echo \"Monitor: tail -f ${LOG_ATA1}\""

@@ -39,7 +39,7 @@ docker run --rm --gpus all --ipc=host \
   "${NEMO_IMAGE}" \
   bash -c "
     pip install -q trl 'transformers>=5.0.0' datasets 2>&1 | grep -E 'Successfully|already|ERROR' || true
-    python /workspace/training/train_qwen35_trl.py
+    python /workspace/train_qwen35_trl.py
   " \
   2>&1 | tee "${LOG}"
 

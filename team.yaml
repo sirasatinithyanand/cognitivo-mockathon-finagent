@@ -1,0 +1,71 @@
+# Team 01 — Agentic · model & fine-tuning manifest
+# Sits beside submission.json. Documents the models the agent uses at inference
+# and the LoRA fine-tuning run that produced the domain model.
+# Authoritative detail: training/MODEL_CARD.md (in the fine-tuning repo).
+
+team:
+  id: team-01
+  name: Team 01 — Agentic
+
+models:
+  # Reasoning "brain": orchestrates tools and synthesises the final answer.
+  # Not fine-tuned — used as served.
+  brain:
+    name: agent-brain
+    base_model: Qwen/Qwen3.6-35B-A3B-Instruct-FP8
+    served_by: vLLM (node0 :8000) via LiteLLM proxy (node0 :4000)
+    endpoint: http://10.0.1.10:4000/v1
+    role: agent reasoning + answer synthesis
+
+  # Fine-tuned domain model: structured qualitative market read for the
+  # sentiment_assess tool (AFR sentiment questions MHQ058 / MHQ067 / MHQ080).
+  # Text only — never emits numbers (deterministic Python tools own the numbers).
+  domain_ft:
+    name: domain-ft
+    base_model: Llama-3.1-Nemotron-Nano-8B-v1
+    adapter: LoRA (step-40 checkpoint)
+    served_by: vLLM + LoRA (node1 :8001) via LiteLLM proxy (node0 :4000)
+    endpoint: http://10.0.1.10:4000/v1
+    model_name: domain-ft
+
+# LoRA fine-tuning — as executed by training/train_1node.py (NeMo 2.x),
+# launched via training/scripts/07_train_8b_quicktest.sh.
+fine_tuning:
+  method: LoRA (PEFT)
+  framework: NeMo 2.x
+  container: nvcr.io/nvidia/nemo:25.09
+  base_model_path: /models/Llama-3.1-Nemotron-Nano-8B-v1
+  lora:
+    rank: 32
+    alpha: 32
+    dropout: 0.05
+    target_modules: ["*_proj"]   # all attention + MLP projection layers
+  optimizer:
+    name: adam
+    lr: 5.0e-5
+    schedule: cosine
+    warmup_steps: 50
+    weight_decay: 0.01
+  training:
+    max_steps: 100               # checkpoints saved every 20 steps
+    selected_checkpoint: step40  # best by side-by-side eval (loss spiked after step 20)
+    micro_batch_size: 1
+    global_batch_size: 1
+    accumulate_grad_batches: 4
+    max_seq_length: 512
+    precision: bf16-mixed
+    gradient_clip_val: 1.0
+    hardware: 1x GB10 (single-node, SingleDeviceStrategy)
+  data:
+    total_examples: 4364         # train 3491 / val 436 / test 437 (80/10/10)
+    distilled_afr_sentiment: 2773  # distilled from the 35B brain (agent-brain)
+    technical_ohlcv: 1500
+    rba_macro: 91
+    sentiment_balance: { positive: 1005, negative: 1151, mixed: 617 }
+  evaluation:
+    method: 50 held-out samples, base vs fine-tuned (training/eval_report.json)
+    composite_improvement_vs_base: "+31.6%"
+  notes: >
+    Loss spiked after step 20 and step 100 was degenerate; step 40 was chosen
+    empirically after loading checkpoints side-by-side in vLLM and testing the
+    three target questions. See training/MODEL_CARD.md for full detail.

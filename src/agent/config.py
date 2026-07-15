@@ -21,10 +21,12 @@ QDRANT_COLLECTION = os.environ.get("QDRANT_COLLECTION", "sample5")
 # domain_predict backing: "mock" (deterministic canned) | "llm" (LiteLLM domain-ft alias)
 DOMAIN_PREDICT_MODE = os.environ.get("DOMAIN_PREDICT_MODE", "mock")
 
-# Path to raw JSONL datasets (RBA, ASX, AFR)
+# Path to raw JSONL datasets (RBA, ASX, AFR).
+# NOTE: the data lives on the Desktop, NOT ~/Downloads (the scaffold's old default
+# was wrong — #1 cause of "empty results"). Override via the DATA_DIR env var.
 DATA_DIR = os.environ.get(
     "DATA_DIR",
-    "/home/cognitivo/Downloads/Jasonl format DataSets"
+    "/home/cognitivo/Desktop/HackathonDataset/Jsonl format DataSets"
 )
 
 MAX_AGENT_STEPS = int(os.environ.get("MAX_AGENT_STEPS", "6"))

@@ -10,7 +10,10 @@
 set -e
 
 MODEL_DIR="${MODEL_DIR:-/home/cognitivo/local-llm-setup/models}"
-MODEL_NAME="nemotron-8b-finance"
+BASE_NAME="nemotron-8b-base"  # internal-only; nothing external calls this name
+MODEL_NAME="domain-ft"        # LoRA alias — matches submission.json's model_name for
+                               # direct technical review at this endpoint, and is what
+                               # LiteLLM's litellm_params.model must also reference
 PORT="${PORT:-8001}"
 VLLM_IMAGE="vllm/vllm-openai:latest"
 GPU_MEM="${GPU_MEM_UTIL:-0.45}"
@@ -22,6 +25,10 @@ echo ""
 
 docker rm -f vllm-domain-ft 2>/dev/null || true
 
+# NOTE: --served-model-name and the --lora-modules name must be DISTINCT.
+# Registering both under the same string is ambiguous about which one a
+# request for that name actually resolves to; use a separate internal name
+# for the base model and keep MODEL_NAME solely as the LoRA alias.
 docker run --gpus all -d \
   --name vllm-domain-ft \
   --restart unless-stopped \
@@ -29,7 +36,7 @@ docker run --gpus all -d \
   -v "${MODEL_DIR}":/models \
   "${VLLM_IMAGE}" \
   --model /models/Llama-3.1-Nemotron-Nano-8B-v1 \
-  --served-model-name "${MODEL_NAME}" \
+  --served-model-name "${BASE_NAME}" \
   --dtype bfloat16 \
   --max-model-len 4096 \
   --gpu-memory-utilization ${GPU_MEM} \

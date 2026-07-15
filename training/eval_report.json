@@ -1,0 +1,1235 @@
+{
+  "base_model": "nemotron-8b-base",
+  "ft_model": "nemotron-8b-finance",
+  "n_samples": 50,
+  "base_avg": {
+    "sentiment_keywords": 0.078,
+    "macro_keywords": 0.142,
+    "technical_keywords": 0.05,
+    "risk_keywords": 0.022,
+    "expected_overlap": 0.292,
+    "length_score": 0.995,
+    "composite": 0.288
+  },
+  "ft_avg": {
+    "sentiment_keywords": 0.086,
+    "macro_keywords": 0.232,
+    "technical_keywords": 0.177,
+    "risk_keywords": 0.068,
+    "expected_overlap": 0.481,
+    "length_score": 0.963,
+    "composite": 0.379
+  },
+  "delta": {
+    "sentiment_keywords": 0.008,
+    "macro_keywords": 0.09,
+    "technical_keywords": 0.127,
+    "risk_keywords": 0.046,
+    "expected_overlap": 0.189,
+    "length_score": -0.032,
+    "composite": 0.091
+  },
+  "improvement_pct": 31.6,
+  "samples": [
+    {
+      "prompt": "ASX daily data for CMW.AX on 2018-07-24:\n  Close: $0.60 | High: $0.61 | Low: $0.60\n  Volume: 1,776,672 | Daily range: 0.71%\n  RBA cash rate: 1.50%\n\nProvide a technical and macro assessment for CMW.",
+      "expected": "Technical Assessment \u2014 CMW.AX (2018-07-24):\n\nDaily range of 0.71% indicates contained volatility. Volume of 1,776,672 suggests normal retail volume.\n\nSupport: $0.60 | Resistance: $0.61 | Close: $0.60\n",
+      "base_response": "<think>\nOkay, let's tackle this request for a technical and macro assessment of CMW based on the provided ASX daily data for CMW.AX on 2018-07-24. I'll break down my thoughts into technical and macro components as requested.\n\n**Technical Assessment:**\n\n1. **Price Action:** The closing price is $0.60",
+      "ft_response": "Technical Assessment \u2014 CMW.AX (2018-07-24):\n\nDaily range of 0.71% indicates contained volatility. Volume of 1,776,672 suggests normal retail volume.\n\nSupport: $0.60 | Resistance: $0.61 | Close: $0.60\n\nMacro context: RBA at 1.50%. Accommodative policy favours yield stocks and leveraged balance sheets",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.28,
+        "length_score": 1.0,
+        "composite": 0.291
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 1.0,
+        "length_score": 0.9625,
+        "composite": 0.541
+      }
+    },
+    {
+      "prompt": "ASX daily data for AMP.AX on 2019-08-05:\n  Close: $1.53 | High: $1.54 | Low: $1.52\n  Volume: 5,966,835 | Daily range: 1.09%\n  RBA cash rate: 1.00%\n\nProvide a technical and macro assessment for AMP.",
+      "expected": "Technical Assessment \u2014 AMP.AX (2019-08-05):\n\nDaily range of 1.09% indicates contained volatility. Volume of 5,966,835 suggests above-average institutional activity.\n\nSupport: $1.52 | Resistance: $1.54",
+      "base_response": "Sure, I'd be happy to help you with that. Here's a technical and macro assessment for AMP.AX based on the provided ASX daily data for 2019-08-05:\n\n**Technical Assessment:**\n\n1. **Trend:** The closing price of $1.53 is slightly below the high of $1.54, indicating a small downward trend. However, the ",
+      "ft_response": "Technical Assessment \u2014 AMP.AX (2019-08-05):\n\nDaily range of 1.09% indicates contained volatility. Volume of 5,966,835 suggests normal retail volume.\n\nSupport: $1.52 | Resistance: $1.54 | Close: $1.53\n\nMacro context: RBA at 1.00%. Accommodative policy favours yield stocks and leveraged balance sheets",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.296,
+        "length_score": 1.0,
+        "composite": 0.278
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.852,
+        "length_score": 0.975,
+        "composite": 0.498
+      }
+    },
+    {
+      "prompt": "ASX daily data for AGL.AX on 2019-10-28:\n  Close: $13.89 | High: $13.98 | Low: $13.85\n  Volume: 1,206,567 | Daily range: 0.91%\n  RBA cash rate: 0.75%\n\nProvide a technical and macro assessment for AGL.",
+      "expected": "Technical Assessment \u2014 AGL.AX (2019-10-28):\n\nDaily range of 0.91% indicates contained volatility. Volume of 1,206,567 suggests normal retail volume.\n\nSupport: $13.85 | Resistance: $13.98 | Close: $13.",
+      "base_response": "<think>\nOkay, let's tackle this technical and macro assessment for AGL.AX. I'll start by breaking down the information provided and then analyze both aspects.\n\n**Technical Assessment:**\n\n1. **Price Action:** The close price of $13.89 is slightly below the high of $13.98, indicating a small downward ",
+      "ft_response": "Technical Assessment \u2014 AGL.AX (2019-10-28):\n\nDaily range of 0.91% indicates contained volatility. Volume of 1,206,567 suggests normal retail volume.\n\nSupport: $13.85 | Resistance: $13.98 | Close: $13.89\n\nMacro context: RBA at 0.75%. Accommodative policy favours yield stocks and leveraged balance she",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.0,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.32,
+        "length_score": 1.0,
+        "composite": 0.265
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 1.0,
+        "length_score": 0.925,
+        "composite": 0.535
+      }
+    },
+    {
+      "prompt": "Date: 2018-03-14\nRBA cash rate: 1.50%\nAFR Headline: NEG needed in sector's 'mega disruption'\nArticle: Energy policy supremo Kerry Schott has sought to calm fears that the proposed National Energy Guar",
+      "expected": "Sentiment: mixed\nDirection: Pressure on generator-retailers, potential upside for smaller competitors\nAssessment: The proposed National Energy Guarantee aims to stabilise the market after a period of ",
+      "base_response": "Based on the provided information, here's an assessment of the market sentiment and likely ASX impact for the energy sector, focusing on the National Energy Guarantee (NEG) and its potential effects:\n\n**Market Sentiment:**\n\n* **Initial Concern:** The article highlights initial concerns from smaller ",
+      "ft_response": "Sentiment: negative\nDirection: Energy sector under pressure from supply chain risks\nAssessment: The article highlights significant supply chain disruptions threatening margins in major energy suppliers like ERM Power, which could weigh on the ASX. With the RBA cash rate holding steady at 1.50%, the ",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.386,
+        "length_score": 1.0,
+        "composite": 0.286
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.295,
+        "length_score": 0.9375,
+        "composite": 0.309
+      }
+    },
+    {
+      "prompt": "Date: 2019-05-09\nRBA cash rate: 1.50%\nAFR Headline: ACCC misreads mobile market\nArticle: Rod Sims is kidding himself if he thinks the Australian Competition and Consumer Commission can win the federal",
+      "expected": "Sentiment: positive\nDirection: Vodafone and TPG shares likely to rise on merger approval odds\nAssessment: The article suggests the ACCC is likely to lose its legal challenge against the $15 billion Vo",
+      "base_response": "Based on the provided information, here's an assessment of the market sentiment and likely ASX impact:\n\n**Market Sentiment:**\n\n* **Negative**: The article suggests that the ACCC is likely to suffer an embarrassing loss in the federal court case, which could lead to a significant setback for the ACCC",
+      "ft_response": "Sentiment: negative\nDirection: ACCC faces significant legal risks and reputational damage\nAssessment: The ACCC's defense of its merger rejection is likely to be undermined by the Federal Court's recent ruling, which exposes the ACCC to potential legal losses. This development increases the likelihoo",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.265,
+        "length_score": 1.0,
+        "composite": 0.27
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.294,
+        "length_score": 1.0,
+        "composite": 0.278
+      }
+    },
+    {
+      "prompt": "Date: 2015-01-28\nRBA cash rate: 2.50%\nAFR Headline: Real world research\nArticle: Reserve Bank board member Catherine Tanna is a complete professional, so she of course would do nothing of the sort.\n\nA",
+      "expected": "Sentiment: mixed\nDirection: Neutral to slightly positive on stability\nAssessment: The article offers no substantive economic data or policy shifts, relying instead on a personal character assessment o",
+      "base_response": "Given the context of the article, here's an assessment of the market sentiment and likely ASX impact based on the information provided:\n\n**Market Sentiment:**\n\n* **Positive**: The article highlights Reserve Bank (RBA) Board Member Catherine Tanna's professional background, implying a credible and co",
+      "ft_response": "Sentiment: positive\nDirection: Broad-based rally driven by strong RBA support\nAssessment: The article highlights the professionalism of RBA board member Catherine Tanna, reinforcing the stability and credibility of the 2.50% cash rate. This positive sentiment suggests robust economic conditions and ",
+      "base_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.333,
+        "length_score": 1.0,
+        "composite": 0.35
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.4,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.405,
+        "length_score": 0.975,
+        "composite": 0.407
+      }
+    },
+    {
+      "prompt": "ASX daily data for CBA.AX on 2018-11-09:\n  Close: $52.93 | High: $52.93 | Low: $52.49\n  Volume: 2,818,344 | Daily range: 0.85%\n  RBA cash rate: 1.50%\n\nProvide a technical and macro assessment for CBA.",
+      "expected": "Technical Assessment \u2014 CBA.AX (2018-11-09):\n\nDaily range of 0.85% indicates contained volatility. Volume of 2,818,344 suggests above-average institutional activity.\n\nSupport: $52.49 | Resistance: $52.",
+      "base_response": "<think>\nOkay, let's tackle this technical and macro assessment for CBA.AX on the given ASX daily data. I'll break it down into both technical and macro components.\n\n**Technical Assessment:**\n\n1. **Price Action:** The close price is the same as the high, indicating that the stock didn't move much dur",
+      "ft_response": "Technical Assessment \u2014 CBA.AX (2018-11-09):\n\nDaily range of 0.85% indicates contained volatility. Volume of 2,818,344 suggests normal retail volume.\n\nSupport: $52.49 | Resistance: $52.93 | Close: $52.93\n\nMacro context: RBA at 1.50%. Accommodative policy favours yield stocks and leveraged balance she",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.222,
+        "length_score": 1.0,
+        "composite": 0.255
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.852,
+        "length_score": 0.9375,
+        "composite": 0.492
+      }
+    },
+    {
+      "prompt": "ASX daily data for IAG.AX on 2016-12-12:\n  Close: $4.15 | High: $4.16 | Low: $4.12\n  Volume: 3,986,750 | Daily range: 0.94%\n  RBA cash rate: 1.50%\n\nProvide a technical and macro assessment for IAG.",
+      "expected": "Technical Assessment \u2014 IAG.AX (2016-12-12):\n\nDaily range of 0.94% indicates contained volatility. Volume of 3,986,750 suggests above-average institutional activity.\n\nSupport: $4.12 | Resistance: $4.16",
+      "base_response": "<think>\nOkay, let's tackle this technical and macro assessment for IAG.AX. First, I need to understand the data provided. The close price is $4.15, with a high of $4.16 and a low of $4.12. The daily range is 0.94%, which is calculated by taking the difference between high and low prices and dividing",
+      "ft_response": "Technical Assessment \u2014 IAG.AX (2016-12-12):\n\nDaily range of 0.94% indicates contained volatility. Volume of 3,986,750 suggests normal retail volume.\n\nSupport: $4.12 | Resistance: $4.16 | Close: $4.15\n\nMacro context: RBA at 1.50%. Accommodative policy favours yield stocks and leveraged balance sheets",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.296,
+        "length_score": 1.0,
+        "composite": 0.298
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.852,
+        "length_score": 0.975,
+        "composite": 0.518
+      }
+    },
+    {
+      "prompt": "Date: 2018-03-13\nRBA cash rate: 1.50%\nAFR Headline: Uber rival GoCatch plans ASX listing\nArticle: Australian Uber rival GoCatch, which is backed by several high-profile Australians, including billiona",
+      "expected": "Sentiment: positive\nDirection: Small-cap transport sector activity\nAssessment: The planned ASX listing of GoCatch signals renewed interest in the ride-sourcing sector despite a turbulent history. The ",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact of the GoCatch IPO as follows:\n\nMarket Sentiment:\n\n1. **Positive**: The news of GoCatch listing on the ASX is likely to be received positively by the market, given the company's high-profile backing and its",
+      "ft_response": "Sentiment: positive\nDirection: GoCatch likely to rise on strong ASX listing plans\nAssessment: The company's strong ASX listing plans signal strong financial stability and operational efficiency, which supports positive sentiment. With high-profile Australian investors backing the company, GoCatch is",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.324,
+        "length_score": 1.0,
+        "composite": 0.287
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.353,
+        "length_score": 1.0,
+        "composite": 0.333
+      }
+    },
+    {
+      "prompt": "Date: 2017-12-11\nRBA cash rate: 1.50%\nAFR Headline: Social media drives up insurance costs\nArticle: Policy holders who complain about their experience on social media are driving the cost of insurance",
+      "expected": "Sentiment: negative\nDirection: Insurance sector under pressure\nAssessment: Rising claims costs and shrinking margins are fundamentally challenging the economics of the insurance industry. The inabilit",
+      "base_response": "Based on the provided information, here's an assessment of the market sentiment and likely ASX impact for the insurance sector in Australia:\n\n**Market Sentiment:**\n\n* **Negative**: The article highlights a significant challenge for insurers, with social media-driven dissatisfaction leading to increa",
+      "ft_response": "Sentiment: negative\nDirection: Insurers face margin pressure from social media claims\nAssessment: The article highlights a significant shift in the insurance industry's margins due to rising claims from social media users. This pressure threatens profitability and profitability, forcing insurers to ",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.452,
+        "length_score": 1.0,
+        "composite": 0.326
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.516,
+        "length_score": 1.0,
+        "composite": 0.404
+      }
+    },
+    {
+      "prompt": "Date: 2020-02-13\nRBA cash rate: 0.75%\nAFR Headline: Wall of money to drive logistics sector boom\nArticle: An estimated $30 billion of eager investor capital seeking a home in the booming industrial pr",
+      "expected": "Sentiment: positive\nDirection: Support for logistics and industrial REITs\nAssessment: The influx of $30 billion in investor capital into the industrial property sector signals strong demand for logist",
+      "base_response": "<think>\nOkay, let's tackle this analysis. The user wants me to assess market sentiment and the likely ASX impact based on the given article. \n\nFirst, I need to understand the key points from the article. The main takeaway is that there's a surge in demand for massive automated warehouses due to inve",
+      "ft_response": "Sentiment: positive\nDirection: Industrial property sector likely to rise on strong demand\nAssessment: The article highlights strong investor interest in Australia's booming logistics sector, suggesting robust demand for high-efficiency warehouses. This positive momentum supports the ASX, indicating ",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.364,
+        "length_score": 1.0,
+        "composite": 0.298
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.386,
+        "length_score": 1.0,
+        "composite": 0.383
+      }
+    },
+    {
+      "prompt": "ASX daily data for ANZ.AX on 2020-10-02:\n  Close: $12.24 | High: $12.45 | Low: $12.16\n  Volume: 5,580,075 | Daily range: 2.4%\n  RBA cash rate: 0.25%\n\nProvide a technical and macro assessment for ANZ.",
+      "expected": "Technical Assessment \u2014 ANZ.AX (2020-10-02):\n\nDaily range of 2.4% indicates contained volatility. Volume of 5,580,075 suggests above-average institutional activity.\n\nSupport: $12.16 | Resistance: $12.4",
+      "base_response": "Sure, I'd be happy to help you with that. Here's a technical and macro assessment for ANZ based on the provided ASX daily data for ANZ.AX on 2020-10-02:\n\n**Technical Assessment:**\n\n* **Trend:** The closing price of $12.24 is slightly below the high of $12.45, indicating a potential short-term downtr",
+      "ft_response": "Technical Assessment \u2014 ANZ.AX (2020-10-02):\n\nDaily range of 2.4% indicates contained volatility. Volume of 5,580,075 suggests normal retail volume.\n\nSupport: $12.16 | Resistance: $12.45 | Close: $12.24\n\nMacro context: RBA at 0.25%. Accommodative policy favours yield stocks and leveraged balance shee",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.296,
+        "length_score": 1.0,
+        "composite": 0.278
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.852,
+        "length_score": 0.95,
+        "composite": 0.494
+      }
+    },
+    {
+      "prompt": "ASX daily data for SGP.AX on 2019-01-08:\n  Close: $2.27 | High: $2.27 | Low: $2.23\n  Volume: 6,929,616 | Daily range: 1.85%\n  RBA cash rate: 1.50%\n\nProvide a technical and macro assessment for SGP.",
+      "expected": "Technical Assessment \u2014 SGP.AX (2019-01-08):\n\nDaily range of 1.85% indicates contained volatility. Volume of 6,929,616 suggests above-average institutional activity.\n\nSupport: $2.23 | Resistance: $2.27",
+      "base_response": "<think>\nOkay, let's tackle this technical and macro assessment for SGP.AX on the given ASX daily data for 2019-01-08. I'll break down both aspects as requested.\n\n**Technical Assessment:**\n\n1. **Price Action:** The close price is $2.27, which is the same as the high, indicating a relatively flat day.",
+      "ft_response": "Technical Assessment \u2014 SGP.AX (2019-01-08):\n\nDaily range of 1.85% indicates contained volatility. Volume of 6,929,616 suggests normal retail volume.\n\nSupport: $2.23 | Resistance: $2.27 | Close: $2.27\n\nMacro context: RBA at 1.50%. Accommodative policy favours yield stocks and leveraged balance sheets",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.296,
+        "length_score": 1.0,
+        "composite": 0.335
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.852,
+        "length_score": 0.925,
+        "composite": 0.491
+      }
+    },
+    {
+      "prompt": "Date: 2016-10-10\nRBA cash rate: 1.50%\nAFR Headline: Vendor dearth triggers market angst\nArticle: Weekend capital city property auctions saw some residences fetch prices far above reserve, with agents ",
+      "expected": "Sentiment: mixed\nDirection: Property sector strength offset by broader market caution\nAssessment: The article highlights a supply shortage driving auction prices above reserves, indicating robust dema",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact based on the provided information as follows:\n\nMarket Sentiment:\n\n* **Bearish**: The vendor dearth and abnormal market conditions described in the article suggest a bearish sentiment. The fact that some res",
+      "ft_response": "Sentiment: negative\nDirection: Property sector under pressure from rising costs\nAssessment: The article highlights abnormal market conditions where buyers are outstripping sellers, indicating potential supply shortages and increased costs for property developers. This pressure could weigh on the ASX",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.244,
+        "length_score": 1.0,
+        "composite": 0.263
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.317,
+        "length_score": 0.9625,
+        "composite": 0.319
+      }
+    },
+    {
+      "prompt": "Date: 2016-10-20\nRBA cash rate: 1.50%\nAFR Headline: Industry funds accuse rivals of fee gouging\nArticle: Billions of dollars of default superannuation savings managed by the banks and listed wealth co",
+      "expected": "Sentiment: negative\nDirection: Pressure on bank and wealth management stocks\nAssessment: The article highlights significant reputational and regulatory risks for major banks and listed wealth managers",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact of the article as follows:\n\nMarket Sentiment:\n\n* **Immediate Reaction:** The article is likely to cause a negative sentiment shift in the market, particularly among investors who are sensitive to issues rel",
+      "ft_response": "Sentiment: negative\nDirection: Banks face margin pressure from fee gouging\nAssessment: The article highlights significant costs for banks and listed companies, which could erode margins and profitability. This pressure suggests potential headwinds for the ASX, particularly for the major banks. The s",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.263,
+        "length_score": 1.0,
+        "composite": 0.289
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.447,
+        "length_score": 1.0,
+        "composite": 0.364
+      }
+    },
+    {
+      "prompt": "Date: 2021-04-29\nRBA cash rate: 0.10%\nAFR Headline: Senate group calls for skills boost, tax break to power fintech sector\nArticle: A Senate committee has made 23 recommendations to lift skills and in",
+      "expected": "Sentiment: positive\nDirection: Support for fintech and tech sector growth\nAssessment: The Senate committee's recommendations to boost skills, investment, and tax incentives aim to enhance the competit",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact of the Senate committee's recommendations as follows:\n\n**Market Sentiment:**\n\n* **Positive**: The headline suggests a supportive policy environment for the fintech sector, which is a growing area of interes",
+      "ft_response": "Sentiment: negative\nDirection: Tech sector under pressure from regulatory changes\nAssessment: The Senate committee's proposals introduce significant uncertainty and potential compliance costs for the fintech sector, which could weigh on the performance of Australian tech stocks. These changes may da",
+      "base_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.389,
+        "length_score": 1.0,
+        "composite": 0.345
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.361,
+        "length_score": 1.0,
+        "composite": 0.298
+      }
+    },
+    {
+      "prompt": "Date: 2016-07-29\nRBA cash rate: 1.75%\nAFR Headline: Gold boosts ASX after Fed decision\nArticle: Shares tracked steadily higher on Thursday, shrugging off some morning indecision following the US Fed's",
+      "expected": "Sentiment: positive\nDirection: Miners lead gains following Fed hold\nAssessment: The ASX advanced as mining stocks provided support, driven by a positive reaction to the US Federal Reserve's decision t",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact as follows:\n\nMarket Sentiment: Positive\n\nThe article indicates that the ASX has tracked steadily higher on Thursday, following the US Federal Reserve's (Fed) decision to keep interest rates steady. The Fed'",
+      "ft_response": "Sentiment: positive\nDirection: Broad-based rally driven by gold and stable Fed decision\nAssessment: The article highlights strong momentum in the gold sector and a stable Fed decision that supports the ASX, indicating robust investor confidence. This positive sentiment suggests continued growth and ",
+      "base_scores": {
+        "sentiment_keywords": 0.3,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.395,
+        "length_score": 1.0,
+        "composite": 0.349
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.316,
+        "length_score": 1.0,
+        "composite": 0.361
+      }
+    },
+    {
+      "prompt": "Date: 2021-06-22\nRBA cash rate: 0.10%\nAFR Headline: More Gen Z investors tap advice from specialists\nArticle: The number of Generation Z investors seeking out professional advice from financial planne",
+      "expected": "Sentiment: positive\nDirection: Sustained retail inflows supporting equity valuations\nAssessment: The tripling of Gen Z and doubling of Millennial advised accounts signals robust, long-term capital inf",
+      "base_response": "Based on the provided information, here's an analysis of the market sentiment and potential ASX impact for Generation Z investors seeking professional advice, despite a 30% rise in advice fees:\n\n**Market Sentiment:**\n\n1. **Growing Demand for Professional Advice:** The tripling of Generation Z invest",
+      "ft_response": "Sentiment: positive\nDirection: Millennial investors gain competitive edge in professional advice\nAssessment: The article highlights a significant increase in demand for professional advice from financial planners and stockbrokers, which suggests strong momentum for Millennial clients. This positive ",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.25,
+        "length_score": 1.0,
+        "composite": 0.245
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.25,
+        "length_score": 1.0,
+        "composite": 0.341
+      }
+    },
+    {
+      "prompt": "Date: 2021-07-21\nRBA cash rate: 0.10%\nAFR Headline: INTEREST RATE FUTURES & OPTIONS Prev\tOpeningSETTLEMENT\t\tPrevPrice\tTrade\tHigh\tLow\tPrice\tChange\tVolume\tO/P\nArticle: ASX 30 Day Interbank Cash Rate Fut",
+      "expected": "Sentiment: mixed\nDirection: Neutral to slightly positive bias on rate stability\nAssessment: The futures data indicates the RBA is expected to hold the cash rate at 0.10% through mid-2022, reflecting a",
+      "base_response": "<think>\nOkay, let's dive into this analysis. The user provided a table of ASX 30 Day Interbank Cash Rate Future (IB) prices from August 21, 2021, to November 22, 2021. The task is to assess market sentiment and its likely impact on the ASX.\n\nFirst, I'll look at the data structure. The table shows th",
+      "ft_response": "Sentiment: negative\nDirection: Volatility-driven pressure on yield curve\nAssessment: The article highlights significant pressure on the cash rate, indicating a likely contraction in the monetary policy environment. This pressure suggests a weakening balance of confidence in the RBA's ability to main",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.152,
+        "length_score": 1.0,
+        "composite": 0.274
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.4,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.283,
+        "length_score": 1.0,
+        "composite": 0.354
+      }
+    },
+    {
+      "prompt": "Date: 2015-07-14\nRBA cash rate: 2.00%\nAFR Headline: Aldi in great shape for Coles, Woolies battle\nArticle: Discounter Aldi has underlined the threat it represents to the major grocery chains and indep",
+      "expected": "Sentiment: negative\nDirection: Pressure on Coles and Woolworths margins\nAssessment: Aldi's superior profitability per dollar of sales indicates a significant competitive threat to the duopoly, potenti",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact of the Aldi news as follows:\n\nMarket Sentiment:\n\n* **Bearish**: The news is likely to be received with a bearish sentiment by the market, as it highlights a competitor that is more efficient and profitable ",
+      "ft_response": "Sentiment: positive\nDirection: Aldi shares likely to rise on strong operational momentum\nAssessment: The article highlights Aldi's strong performance against major competitors, positioning it as a strong contender in the Australian grocery market. This positive operational momentum suggests strong p",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.2,
+        "length_score": 1.0,
+        "composite": 0.25
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.3,
+        "length_score": 1.0,
+        "composite": 0.318
+      }
+    },
+    {
+      "prompt": "Date: 2015-10-19\nRBA cash rate: 2.00%\nAFR Headline: Market looks to RBA, China GDP for cues\nArticle: The data flow slows to a trickle in Australia and the United States this week but central bankers f",
+      "expected": "Sentiment: mixed\nDirection: Cautious wait-and-see approach with volatility driven by external data\nAssessment: The market is currently constrained by a thin flow of domestic and US economic data, forc",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact based on the given information as follows:\n\nMarket Sentiment:\n\n* **Neutral to slightly bullish**: The headline suggests that investors are looking for cues from the RBA and China's GDP. This implies a cauti",
+      "ft_response": "Sentiment: negative\nDirection: Volatility-driven correction under RBA influence\nAssessment: The article highlights a slowdown in data flow from major economies, suggesting underlying stability rather than immediate volatility. This stability supports the RBA's 2.00% cash rate, reinforcing its role a",
+      "base_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.4,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.213,
+        "length_score": 1.0,
+        "composite": 0.353
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.4,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.319,
+        "length_score": 1.0,
+        "composite": 0.384
+      }
+    },
+    {
+      "prompt": "Date: 2016-05-30\nRBA cash rate: 1.75%\nAFR Headline: Follow the money on Estia Health\nArticle: The sell down by private equity firms Quadrant and Mercury Capital out of listed aged-care landlord and op",
+      "expected": "Sentiment: negative\nDirection: Downward pressure on Estia Health shares\nAssessment: The divestment by private equity firms Quadrant and Mercury Capital signals a lack of confidence in the $1.2 billion",
+      "base_response": "<think>\nOkay, let's tackle this analysis. So, the question is about assessing market sentiment and the likely ASX impact of the sell-down by Quadrant and Mercury Capital in Estia Health. The date given is 2016-05-30, which is important because it tells me the timing of the event and the financial co",
+      "ft_response": "Sentiment: negative\nDirection: Private equity firms under pressure from Estia Health\nAssessment: The article highlights significant challenges for private equity firms like Quadrant and Mercury Capital, which suggests potential weaknesses in their operations or management. This pressure could weigh ",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.442,
+        "length_score": 1.0,
+        "composite": 0.303
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.465,
+        "length_score": 1.0,
+        "composite": 0.388
+      }
+    },
+    {
+      "prompt": "Date: 2020-07-13\nRBA cash rate: 0.25%\nAFR Headline: ASIC takes banks to task over refunds\nArticle: The corporate regulator has slammed banks and wealth managers for being more willing to spend \"large ",
+      "expected": "Sentiment: negative\nDirection: Regulatory headwinds weigh on bank profitability\nAssessment: ASIC\u2019s criticism highlights a reluctance by major lenders to pragmatically resolve legacy advice issues, pri",
+      "base_response": "Based on the information provided, here's an assessment of the market sentiment and likely ASX impact:\n\n**Market Sentiment:**\n\n* **Negative**: The article highlights a negative aspect of the financial sector, specifically the banks and wealth managers, which are significant players in the Australian",
+      "ft_response": "Sentiment: negative\nDirection: Banks face headwinds from poor financial advice and sluggish remediation\nAssessment: The article highlights significant challenges for major banks, including Commonwealth Bank and Westpac, which are likely to face increased costs and potential reputational damage due t",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.216,
+        "length_score": 1.0,
+        "composite": 0.255
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.432,
+        "length_score": 1.0,
+        "composite": 0.32
+      }
+    },
+    {
+      "prompt": "ASX daily data for SUN.AX on 2021-08-24:\n  Close: $11.87 | High: $11.92 | Low: $11.76\n  Volume: 3,264,670 | Daily range: 1.39%\n  RBA cash rate: 0.10%\n\nProvide a technical and macro assessment for SUN.",
+      "expected": "Technical Assessment \u2014 SUN.AX (2021-08-24):\n\nDaily range of 1.39% indicates contained volatility. Volume of 3,264,670 suggests above-average institutional activity.\n\nSupport: $11.76 | Resistance: $11.",
+      "base_response": "<think>\nOkay, let's tackle this technical and macro assessment for SUN.AX on the given date. First, I'll break down the information provided.\n\nTechnical Assessment:\nThe closing price is $11.87, with a high of $11.92 and a low of $11.76. The daily range is 1.39%, which is calculated as (High - Low)/C",
+      "ft_response": "Technical Assessment \u2014 SUN.AX (2021-08-24):\n\nDaily range of 1.39% indicates contained volatility. Volume of 3,264,670 suggests normal retail volume.\n\nSupport: $11.76 | Resistance: $11.92 | Close: $11.87\n\nMacro context: RBA at 0.10%. Accommodative policy favours yield stocks and leveraged balance she",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.0,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.296,
+        "length_score": 1.0,
+        "composite": 0.258
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.852,
+        "length_score": 0.975,
+        "composite": 0.498
+      }
+    },
+    {
+      "prompt": "Date: 2016-10-20\nRBA cash rate: 1.50%\nAFR Headline: Perri wins permit for first hotel\nArticle: Melbourne-based developer Perri Projects has made a move into the hospitality sector after receiving appr",
+      "expected": "Sentiment: positive\nDirection: Modest upside for Perri Projects\nAssessment: The approval of the 80-room boutique hotel in South Melbourne validates Perri Projects' strategic expansion into the hospita",
+      "base_response": "<think>\n\n<think>\n\n<think>\n\n<think>\nOkay, let's tackle this analysis. The user wants me to assess market sentiment and the likely ASX impact of Perri Projects getting approval for an 80-room hotel in South Melbourne. \n\nFirst, I need to recall what the RBA cash rate is and how it affects the market. T",
+      "ft_response": "Sentiment: positive\nDirection: Perri Projects gains momentum in the hospitality sector\nAssessment: The approval of an 80-room boutique hotel in South Melbourne signals strong confidence in the company's ability to develop and operate in the hospitality sector. This move into the Melbourne-based deve",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.306,
+        "length_score": 1.0,
+        "composite": 0.322
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.0,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.528,
+        "length_score": 1.0,
+        "composite": 0.366
+      }
+    },
+    {
+      "prompt": "ASX daily data for TAH.AX on 2019-07-05:\n  Close: $0.25 | High: $0.25 | Low: $0.25\n  Volume: 31,392,609 | Daily range: 1.31%\n  RBA cash rate: 1.00%\n\nProvide a technical and macro assessment for TAH.",
+      "expected": "Technical Assessment \u2014 TAH.AX (2019-07-05):\n\nDaily range of 1.31% indicates contained volatility. Volume of 31,392,609 suggests above-average institutional activity.\n\nSupport: $0.25 | Resistance: $0.2",
+      "base_response": "<think>\nOkay, let's tackle this technical and macro assessment for TAH.AX based on the provided ASX daily data for July 5, 2019. \n\nStarting with the technical analysis. The data shows that the close, high, and low are all $0.25. That's a very tight range, which suggests that the stock is experiencin",
+      "ft_response": "Technical Assessment \u2014 TAH.AX (2019-07-05):\n\nDaily range of 1.31% indicates contained volatility. Volume of 31,392,609 suggests normal retail volume.\n\nSupport: $0.25 | Resistance: $0.25 | Close: $0.25\n\nMacro context: RBA at 1.00%. Accommodative policy favours yield stocks and leveraged balance sheet",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.37,
+        "length_score": 1.0,
+        "composite": 0.3
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.852,
+        "length_score": 0.925,
+        "composite": 0.511
+      }
+    },
+    {
+      "prompt": "Date: 2016-06-30\nRBA cash rate: 1.75%\nAFR Headline: Key investors could derail McAleese deal\nArticle: McAleese is pushing ahead with a restructuring deal with Hong Kong's SC Lowy, despite a revolt by ",
+      "expected": "Sentiment: negative\nDirection: Downward pressure on McAleese and transport sector sentiment\nAssessment: The article highlights a significant shareholder revolt against the proposed recapitalisation pl",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact of the McAleese restructuring deal as follows:\n\nMarket Sentiment:\n\n* **Short-term:** The news is likely to cause short-term volatility in the ASX, with shares of McAleese likely to experience a significant ",
+      "ft_response": "Sentiment: negative\nDirection: Transport group likely to face headwinds from shareholder revolt\nAssessment: The article highlights significant shareholder opposition to a recapitalisation plan, which could lead to delays or cancellations in the deal with Hong Kong's SC Lowy. This uncertainty and pot",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.19,
+        "length_score": 1.0,
+        "composite": 0.247
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.5,
+        "length_score": 1.0,
+        "composite": 0.417
+      }
+    },
+    {
+      "prompt": "Date: 2019-09-25\nRBA cash rate: 1.00%\nAFR Headline: RBA 'must follow global rates down'\nArticle: Reserve Bank of Australia governor Philip Lowe has signalled he is preparing to cut interest rates agai",
+      "expected": "Sentiment: positive\nDirection: Support for banks and growth stocks\nAssessment: The RBA Governor's signal that further monetary easing is likely due to stagnant consumption and wage growth suggests imm",
+      "base_response": "Based on the information provided, here's an assessment of market sentiment and the likely impact on the ASX:\n\n**Market Sentiment:**\n\n* **Bullish:** The majority of market participants are likely to interpret the Reserve Bank of Australia's (RBA) statement as a strong signal for further monetary eas",
+      "ft_response": "Sentiment: negative\nDirection: RBA likely to cut rates again\nAssessment: The article highlights strong external borrowing costs and stagnating consumption, which suggest the RBA must cut interest rates further to boost the local economy. This pressure intensifies the likelihood of a rate cut next we",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.378,
+        "length_score": 1.0,
+        "composite": 0.323
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.351,
+        "length_score": 0.8125,
+        "composite": 0.287
+      }
+    },
+    {
+      "prompt": "Date: 2016-07-29\nRBA cash rate: 1.75%\nAFR Headline: Lenders blacklist range of 'non-genuine' savings\nArticle: Gifts, inheritances and wage advances are among \"savings\" being discreetly banned by lende",
+      "expected": "Sentiment: negative\nDirection: Lender profitability and housing sector headwinds\nAssessment: The tightening of lending criteria signals a defensive posture by banks to mitigate credit risk, which may ",
+      "base_response": "Given the date of the article (2016-07-29), the analysis should reflect market conditions at that time. Here's an assessment of the market sentiment and likely ASX impact based on the provided information:\n\n**Market Sentiment:**\n\n* **Negative:** The article suggests that lenders are becoming more st",
+      "ft_response": "Sentiment: negative\nDirection: Lenders face headwinds in property valuation\nAssessment: The article highlights significant challenges in property valuation due to the ban on 'non-genuine' savings, which could weigh on the performance of property developers and construction companies. This regulatory",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.2,
+        "length_score": 1.0,
+        "composite": 0.25
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.311,
+        "length_score": 0.875,
+        "composite": 0.265
+      }
+    },
+    {
+      "prompt": "Date: 2015-04-16\nRBA cash rate: 2.25%\nAFR Headline: Stop obsessing about iron ore price, says ANZ boss\nArticle: ANZ chief executive Mike Smith has brushed aside fears about the crash in iron ore price",
+      "expected": "Sentiment: mixed\nDirection: Diversification away from mining volatility\nAssessment: The commentary suggests a shift in focus from the iron ore downturn to other economic sectors, implying that mining ",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact of the article as follows:\n\nMarket Sentiment:\n\n* **Positive**: The article from ANZ's chief executive, Mike Smith, is likely to be seen as a positive signal by the market. The statement that a national obse",
+      "ft_response": "Sentiment: positive\nDirection: ANZ shares likely to rise on strong operational momentum\nAssessment: ANZ's chief executive Mike Smith's dismissal of iron ore concerns signals robust operational performance despite broader market volatility. This confidence in the company's resilience supports positiv",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.31,
+        "length_score": 1.0,
+        "composite": 0.283
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.25,
+        "expected_overlap": 0.19,
+        "length_score": 1.0,
+        "composite": 0.325
+      }
+    },
+    {
+      "prompt": "The RBA held steady the cash rate to 0.10% on 2021-04-07 (on hold). Analyse the implications for Australian equities, the AUD, and fixed income.",
+      "expected": "RBA Decision Analysis \u2014 2021-04-07:\n\n**Decision:** Cash rate held steady to 0.10% (on hold)\n\n**ASX impact:** Markets interpret hold as neutral-to-dovish. Sector rotation toward quality yield.\n\n**AUD:*",
+      "base_response": "<think>\n</think>\n\nThe Reserve Bank of Australia (RBA) held the cash rate steady at 0.10% on April 7, 2021, opting to keep it on hold. This decision has several implications across Australian equities, the Australian Dollar (AUD), and fixed income:\n\n1. **Australian Equities**: A steady cash rate can ",
+      "ft_response": "RBA Decision Analysis \u2014 2021-04-07:\n\n**Decision:** Cash rate held steady at 0.10% (on hold)\n\n**Analysis:** The decision signals strong confidence in the economy and inflationary pressures. This stability supports risk-free yields and stable returns for high-quality debt.\n\n**AUD:** The steady cash ra",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.345,
+        "length_score": 1.0,
+        "composite": 0.332
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.5,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.483,
+        "length_score": 1.0,
+        "composite": 0.452
+      }
+    },
+    {
+      "prompt": "Date: 2018-11-26\nRBA cash rate: 1.50%\nAFR Headline: Cromwell prepares to shake the can in $300m raising\nArticle: The flurry of M&A that has hit the listed property sector in recent months has narrowed",
+      "expected": "Sentiment: negative\nDirection: Dilution pressure on Cromwell REIT\nAssessment: The proposed $300 million equity raising introduces significant dilution risk for existing shareholders, which typically w",
+      "base_response": "Sure, I'd be happy to help you assess the market sentiment and likely ASX impact of Cromwell's potential stock raising. Here's my analysis:\n\nMarket Sentiment: The article highlights a trend of stock sell-offs in the ASX, particularly in the property sector, which has been hit by a flurry of mergers ",
+      "ft_response": "Sentiment: negative\nDirection: Property sector under pressure from rising costs and supply constraints\nAssessment: The article highlights significant supply constraints and rising costs in the property sector, which could weigh on the performance of major property developers and operators. This pres",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.237,
+        "length_score": 1.0,
+        "composite": 0.26
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.342,
+        "length_score": 1.0,
+        "composite": 0.293
+      }
+    },
+    {
+      "prompt": "ASX daily data for BHP.AX on 2019-08-29:\n  Close: $19.61 | High: $19.74 | Low: $19.40\n  Volume: 5,428,332 | Daily range: 1.69%\n  RBA cash rate: 1.00%\n\nProvide a technical and macro assessment for BHP.",
+      "expected": "Technical Assessment \u2014 BHP.AX (2019-08-29):\n\nDaily range of 1.69% indicates contained volatility. Volume of 5,428,332 suggests above-average institutional activity.\n\nSupport: $19.40 | Resistance: $19.",
+      "base_response": "<think>\nOkay, let's tackle this technical and macro assessment for BHP.AX. First, I'll break down the information given and then analyze both aspects.\n\n**Technical Assessment:**\n\n1. **Market Indicators:**\n   - **Close Price:** $19.61\n   - **High:** $19.74\n   - **Low:** $19.40\n   - **Daily Range:** 1",
+      "ft_response": "Technical Assessment \u2014 BHP.AX (2019-08-29):\n\nDaily range of 1.69% indicates contained volatility. Volume of 5,428,332 suggests normal retail volume.\n\nSupport: $19.40 | Resistance: $19.74 | Close: $19.61\n\nMacro context: RBA at 1.00%. Accommodative policy favours yield stocks and leveraged balance she",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.0,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.259,
+        "length_score": 0.7875,
+        "composite": 0.215
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.852,
+        "length_score": 0.9375,
+        "composite": 0.492
+      }
+    },
+    {
+      "prompt": "Date: 2016-02-09\nRBA cash rate: 2.00%\nAFR Headline: Sandgropers outraged over NSW colonisation\nArticle: Well that's a surprise. Stadium Australia, the firm that runs Sydney's unloved Olympic leftover ",
+      "expected": "Sentiment: positive\nDirection: Modest upside for Stadium Australia\nAssessment: The article highlights a positive trading day for Stadium Australia, suggesting investor confidence despite the political",
+      "base_response": "Given the date of the article (2016-02-09), the RBA cash rate is 2.00%, and the headline is about Australian news regarding colonisation and public opinion, I'll provide an assessment of market sentiment and likely ASX impact based on the information provided.\n\nMarket Sentiment:\n\n* **Surprise Positi",
+      "ft_response": "Sentiment: positive\nDirection: NSW colonisation boosts confidence in Sydney's unloved assets\nAssessment: The article highlights strong performance by Stadium Australia, suggesting robust demand for Sydney's unloved Olympic sites. This positive momentum supports investor confidence in the city's unde",
+      "base_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.367,
+        "length_score": 1.0,
+        "composite": 0.36
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.5,
+        "length_score": 1.0,
+        "composite": 0.417
+      }
+    },
+    {
+      "prompt": "Date: 2016-08-02\nRBA cash rate: 1.75%\nAFR Headline: The type of home Baby Boomers are chasing\nArticle: The Australian Financial Review has spoken to the team behind the weekend's most intriguing prope",
+      "expected": "Sentiment: mixed\nDirection: Neutral to slightly positive for property sector\nAssessment: The article highlights strong demand from Baby Boomers for specific property types, suggesting resilience in th",
+      "base_response": "<think>\nOkay, let's tackle this analysis. The user wants me to assess market sentiment and the likely ASX impact based on the given article from the Australian Financial Review (AFR) from August 2016. \n\nFirst, I need to understand the context. The article mentions that Baby Boomers are chasing a spe",
+      "ft_response": "Sentiment: positive\nDirection: Home construction and property sector likely to benefit from strong demand\nAssessment: The article highlights strong momentum in the property sector, suggesting robust underlying value. This positive sentiment supports the ASX, indicating strong confidence in the local",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.178,
+        "length_score": 1.0,
+        "composite": 0.242
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.333,
+        "length_score": 0.925,
+        "composite": 0.356
+      }
+    },
+    {
+      "prompt": "The RBA held steady the cash rate to 1.50% on 2017-02-08 (on hold). Analyse the implications for Australian equities, the AUD, and fixed income.",
+      "expected": "RBA Decision Analysis \u2014 2017-02-08:\n\n**Decision:** Cash rate held steady to 1.50% (on hold)\n\n**ASX impact:** Markets interpret hold as neutral-to-dovish. Sector rotation toward quality yield.\n\n**AUD:*",
+      "base_response": "<think>\n</think>\n\nThe Reserve Bank of Australia (RBA) held the cash rate steady at 3.75% on 2017-02-08, which was a significant decision as it was the first time the cash rate had remained unchanged in a rate-setting meeting since 2003. Here's an analysis of the implications for Australian equities,",
+      "ft_response": "RBA Decision Analysis \u2014 2017-02-08:\n\n**Decision:** Cash rate held steady to 1.50% (on hold)\n\n**Analysis:** The decision signals strong confidence in the economy and inflationary pressures. This stability supports risk-adjusted credit spreads and stable returns for quality debt.\n\n**AUD:** The steady ",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.4,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.414,
+        "length_score": 1.0,
+        "composite": 0.354
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.6,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.552,
+        "length_score": 1.0,
+        "composite": 0.454
+      }
+    },
+    {
+      "prompt": "Date: 2020-05-02\nRBA cash rate: 0.25%\nAFR Headline: Inside Ross McEwan's strategy to rebuild National Australia Bank\nArticle: Leadership It's a great time to be running a bank, says the new CEO\n\nThe b",
+      "expected": "Sentiment: mixed\nDirection: Short-term volatility with cautious optimism on capital strength\nAssessment: The capital raise at a historic low valuation signals immediate market stress and dilution, yet",
+      "base_response": "Based on the provided information, here's an assessment of the market sentiment and likely ASX impact for National Australia Bank (NAB) by an Australian financial analyst:\n\n**Market Sentiment:**\n\n* **Short-term:** The capital raising, dividend cut, and provision are likely to be viewed as negative n",
+      "ft_response": "Sentiment: negative\nDirection: NAB likely to face headwinds from capital spending and dividend cuts\nAssessment: The bank's $3.5 billion capital injection and $807 million provision signal significant financial strain. With a 0.25% RBA cash rate holding steady, the bank faces ongoing challenges in ma",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.222,
+        "length_score": 1.0,
+        "composite": 0.257
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.278,
+        "length_score": 1.0,
+        "composite": 0.293
+      }
+    },
+    {
+      "prompt": "Date: 2019-01-25\nRBA cash rate: 1.50%\nAFR Headline: Customers urged to cut energy use as heatwave strains system\nArticle: The Australian Energy Market Operator called on customers in Victoria and Sout",
+      "expected": "Sentiment: negative\nDirection: Energy sector volatility and infrastructure stress\nAssessment: The reliance on emergency reserve capacity and the threat of mandatory industrial cuts highlight systemic ",
+      "base_response": "Based on the information provided, here's an assessment of the market sentiment and likely ASX impact for the financial analyst:\n\n**Market Sentiment:**\n\n* **Positive**: The news could be seen as positive for the energy sector, as it highlights the importance of energy efficiency and the ability of l",
+      "ft_response": "Sentiment: negative\nDirection: Energy sector under pressure from reduced demand\nAssessment: The article highlights significant challenges for major energy companies, suggesting potential supply-side weakness and reduced margins. This pressure could weigh on the ASX, particularly for companies relian",
+      "base_scores": {
+        "sentiment_keywords": 0.3,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.211,
+        "length_score": 1.0,
+        "composite": 0.293
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.342,
+        "length_score": 1.0,
+        "composite": 0.333
+      }
+    },
+    {
+      "prompt": "Date: 2015-01-13\nRBA cash rate: 2.50%\nAFR Headline: Senex maintains optimism on gas\nArticle: Senex Energy managing director Ian Davies has declared that the company's Queensland gas venture will be ex",
+      "expected": "Sentiment: positive\nDirection: Senex Energy shares likely to rise on reduced capex risk\nAssessment: Senex Energy\u2019s decision to exempt its Queensland gas venture from capital expenditure cuts signals s",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact of the Senex Energy announcement as follows:\n\nMarket Sentiment: Positive\n\nThe announcement by Senex Energy's Managing Director, Ian Davies, is likely to be received positively by the market. This is because",
+      "ft_response": "Sentiment: positive\nDirection: Senex shares likely to rise on low capex risk\nAssessment: The exemption from capex cutbacks reduces Senex's development costs, allowing the company to maintain its cash flow stability. This positive operational outlook supports the stock's valuation and provides a defe",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.341,
+        "length_score": 1.0,
+        "composite": 0.292
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.0,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.39,
+        "length_score": 0.825,
+        "composite": 0.279
+      }
+    },
+    {
+      "prompt": "Date: 2016-10-18\nRBA cash rate: 1.50%\nAFR Headline: Apple is 'intransigent, closed and controlling', banks say\nArticle: Three of Australia's big four banks have described technology giant Apple as bei",
+      "expected": "Sentiment: negative\nDirection: Pressure on ASX payment infrastructure stocks\nAssessment: The public dispute between major Australian banks and Apple highlights significant friction in the digital paym",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact of the article regarding the Australian big four banks' concerns with Apple as follows:\n\nMarket Sentiment:\n\n* **Negative**: The article presents a negative sentiment towards Apple, specifically from the per",
+      "ft_response": "Sentiment: negative\nDirection: Apple shares likely to face headwinds from regulatory scrutiny\nAssessment: The Australian Primes Bank (RBA) has identified significant weaknesses in Apple's operations and financial management, which could lead to further margin compression and potential penalties. Thi",
+      "base_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.171,
+        "length_score": 1.0,
+        "composite": 0.261
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.244,
+        "length_score": 0.7875,
+        "composite": 0.251
+      }
+    },
+    {
+      "prompt": "ASX daily data for QAN.AX on 2017-06-21:\n  Close: $4.70 | High: $4.74 | Low: $4.62\n  Volume: 12,345,152 | Daily range: 2.55%\n  RBA cash rate: 1.50%\n\nProvide a technical and macro assessment for QAN.",
+      "expected": "Technical Assessment \u2014 QAN.AX (2017-06-21):\n\nDaily range of 2.55% indicates contained volatility. Volume of 12,345,152 suggests above-average institutional activity.\n\nSupport: $4.62 | Resistance: $4.7",
+      "base_response": "<think>\nOkay, let's tackle this technical and macro assessment for QAN.AX based on the provided ASX daily data for June 21, 2017. I'll break down both aspects as requested.\n\n**Technical Assessment:**\n\n1. **Price Action:** The stock closed at $4.70, which is slightly below the high of $4.74. This ind",
+      "ft_response": "Technical Assessment \u2014 QAN.AX (2017-06-21):\n\nDaily range of 2.55% indicates contained volatility. Volume of 12,345,152 suggests normal retail volume.\n\nSupport: $4.62 | Resistance: $4.74 | Close: $4.70\n\nMacro context: RBA at 1.50%. Accommodative policy favours yield stocks and leveraged balance sheet",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.259,
+        "length_score": 1.0,
+        "composite": 0.248
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.375,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.852,
+        "length_score": 0.9,
+        "composite": 0.507
+      }
+    },
+    {
+      "prompt": "Date: 2016-10-31\nRBA cash rate: 1.50%\nAFR Headline: Surprise over banks topping enemy list\nArticle: Exclusive | New Citi Australia country chief David Livingstone can't help but feel \"surprised\" after",
+      "expected": "Sentiment: mixed\nDirection: Neutral to slightly negative for major banks\nAssessment: The article highlights reputational risks and intense competition from fintech, which pressures the public percepti",
+      "base_response": "Sure, I'll provide an assessment of the market sentiment and likely ASX impact based on the provided article.\n\n**Market Sentiment Analysis:**\n\n* **Surprise Factor:** The article highlights a \"surprise\" from David Livingstone, which could initially create a sense of uncertainty among market participa",
+      "ft_response": "Sentiment: positive\nDirection: Banks benefit from strong domestic capital buffers\nAssessment: The article highlights strong domestic capital buffers in Citi Australia, which supports the company's resilience against cyber threats. This positive performance indicates robust financial stability despit",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.265,
+        "length_score": 1.0,
+        "composite": 0.27
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.382,
+        "length_score": 0.925,
+        "composite": 0.332
+      }
+    },
+    {
+      "prompt": "Date: 2018-01-29\nRBA cash rate: 1.50%\nAFR Headline: Westpac scraps plan for 'instant mortgages'\nArticle: Westpac Banking Corp has abandoned plans to offer an \"instant mortgage\" as the regulators prepa",
+      "expected": "Sentiment: negative\nDirection: Headwinds for Westpac and broader banking sector profitability\nAssessment: The abandonment of the instant mortgage initiative signals intensifying regulatory pressure on",
+      "base_response": "Based on the information provided, here's an assessment of the market sentiment and likely ASX impact for Westpac Banking Corp (WBC) regarding the scrapping of its \"instant mortgage\" project:\n\n**Market Sentiment:**\n\n* **Short-term:** The news is likely to be seen as a negative for Westpac, as it sig",
+      "ft_response": "Sentiment: negative\nDirection: Westpac likely to face headwinds from regulatory scrutiny\nAssessment: The RBA's decision to turn up the heat on banks and their lending practices signals heightened regulatory pressure on Westpac's operations. This regulatory tightening increases the likelihood of furt",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.233,
+        "length_score": 1.0,
+        "composite": 0.26
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.372,
+        "length_score": 0.9125,
+        "composite": 0.308
+      }
+    },
+    {
+      "prompt": "Date: 2021-11-17\nRBA cash rate: 0.10%\nAFR Headline: RBA seeks lessons from pandemic crisis moves\nArticle: The Reserve Bank of Australia's extraordinary pandemic policy settings will be reviewed next y",
+      "expected": "Sentiment: mixed\nDirection: Uncertainty over future monetary policy normalization\nAssessment: The RBA's proactive review of its pandemic-era interventions, including the $200 billion bond-buying progr",
+      "base_response": "<think>\n</think>\n\n**Market Sentiment & Likely ASX Impact Assessment**\n\n**Date:** 2021-11-17\n\n**Event:** Announcement of a review of the Reserve Bank of Australia's (RBA) pandemic policy settings, including its yield curve target and massive bond-buying program.\n\n**Market Sentiment:**\n\n1. **Initial R",
+      "ft_response": "Sentiment: negative\nDirection: RBA likely to face headwinds from COVID-19 review\nAssessment: The RBA's decision to review its pandemic policy settings signals potential regulatory headwinds as it seeks lessons from the COVID-19 crisis. This move introduces uncertainty regarding the bank's yield curv",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.311,
+        "length_score": 0.9875,
+        "composite": 0.301
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.422,
+        "length_score": 1.0,
+        "composite": 0.337
+      }
+    },
+    {
+      "prompt": "Date: 2018-06-01\nRBA cash rate: 1.50%\nAFR Headline: MYOB share tumble after it abandons Reckon deal\nArticle: MYOB has pulled out of its $180 million deal to buy competitor Reckon's accounting software",
+      "expected": "Sentiment: negative\nDirection: MYOB underperforms as strategic pivot faces execution risk\nAssessment: MYOB shares dropped over 8 per cent after abandoning the Reckon acquisition due to anticipated ACC",
+      "base_response": "Based on the provided information, here's an assessment of the market sentiment and likely ASX impact for MYOB's announcement to abandon the Reckon deal:\n\n**Market Sentiment:**\n\n* **Negative**: The announcement is likely to be received negatively by the market, as it indicates a significant strategi",
+      "ft_response": "Sentiment: negative\nDirection: MYOB shares likely to drop further on weak Reckon deal\nAssessment: The Australian Competition and Consumer Commission's decision to block the $1.8 billion transaction adds uncertainty and potential delays to MYOB's expansion plans, which could weigh on the stock's perf",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.316,
+        "length_score": 1.0,
+        "composite": 0.285
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.263,
+        "length_score": 1.0,
+        "composite": 0.288
+      }
+    },
+    {
+      "prompt": "Date: 2021-11-22\nRBA cash rate: 0.10%\nAFR Headline: Crypto 'no fad', Hume tells RBA\nArticle: Financial Services Minister Jane Hume has hit back at the Reserve Bank of Australia, saying cryptocurrencie",
+      "expected": "Sentiment: mixed\nDirection: Support for digital asset stocks amid regulatory clarity\nAssessment: The article highlights a divergence between government ambition and central bank caution, with Minister",
+      "base_response": "Based on the information provided, here's an assessment of the market sentiment and likely ASX impact:\n\n**Market Sentiment:**\n\n* **Positive**: The article highlights the potential for Australia to miss out on major economic opportunities if it's too fearful of embracing new technology, specifically ",
+      "ft_response": "Sentiment: negative\nDirection: Crypts under pressure from regulatory risks\nAssessment: The RBA's warning of a potential crash signals heightened uncertainty and potential weakness in the cryptocurrency market. This negative sentiment suggests that investors should be cautious and prepared for signif",
+      "base_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.271,
+        "length_score": 1.0,
+        "composite": 0.311
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.25,
+        "expected_overlap": 0.333,
+        "length_score": 0.9625,
+        "composite": 0.304
+      }
+    },
+    {
+      "prompt": "Date: 2015-03-26\nRBA cash rate: 2.25%\nAFR Headline: Fund acquires $26.4m centre\nArticle: Fort Street Real Estate Capital's second Australian Property Opportunities Fund has picked up the Newtown Centr",
+      "expected": "Sentiment: positive\nDirection: Support for listed property trusts\nAssessment: The acquisition demonstrates continued investor confidence in Sydney's retail sector despite the low 2.25% cash rate envir",
+      "base_response": "As an Australian financial analyst, I would assess the market sentiment and likely ASX impact of this acquisition as follows:\n\nMarket Sentiment:\n\n* The news is likely to be seen as positive for the Australian property market, as it indicates a strong demand for retail property in Sydney, one of the ",
+      "ft_response": "Sentiment: positive\nDirection: Fort Street Real Estate Capital shares likely to rise on strong property acquisition\nAssessment: The successful off-market purchase of the Newtown Central shopping centre signals strong operational efficiency and strategic positioning. This acquisition reinforces Fort ",
+      "base_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.353,
+        "length_score": 1.0,
+        "composite": 0.296
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.125,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.5,
+        "length_score": 1.0,
+        "composite": 0.379
+      }
+    },
+    {
+      "prompt": "The RBA increased the cash rate to 2.35% on 2022-09-07 (50bps hike). Analyse the implications for Australian equities, the AUD, and fixed income.",
+      "expected": "RBA Decision Analysis \u2014 2022-09-07:\n\n**Decision:** Cash rate increased to 2.35% (50bps hike)\n\n**ASX impact:** Banks benefit from NIM expansion; growth stocks de-rate on higher discount rates. REITs an",
+      "base_response": "Here's an analysis of the implications for Australian equities, the AUD, and fixed income following the Reserve Bank of Australia's (RBA) 50 basis point (bps) hike in the cash rate to 2.35% on September 7, 2022:\n\n### 1. **Australian Equities:**\n\n* **Short-term Impact:** A higher cash rate can lead t",
+      "ft_response": "RBA Decision Analysis \u2014 2022-09-07:\n\n**Decision:** Cash rate hike to 2.35% (50bps)\n\n**Analysis:** The Federal Reserve's aggressive monetary tightening signals robust economic growth and inflationary pressures. This hawkish stance supports the yield curve and encourages capital expenditure.\n\n**AUD:**",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.278,
+        "length_score": 1.0,
+        "composite": 0.293
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.5,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.278,
+        "length_score": 1.0,
+        "composite": 0.371
+      }
+    },
+    {
+      "prompt": "Date: 2018-10-02\nRBA cash rate: 1.50%\nAFR Headline: What moved the market\nArticle: Credit\n\nUBS is forecasting further credit tightening on the back of the royal commission with house credit growth set",
+      "expected": "Sentiment: mixed\nDirection: Mining sector strength offset by housing sector headwinds\nAssessment: The article highlights a divergence between strong industrial metal prices, driven by low zinc invento",
+      "base_response": "Based on the provided information, here's an assessment of the market sentiment and likely ASX impact by an Australian financial analyst:\n\n**Market Sentiment:**\n\n* **Credit:** The market is likely to be concerned about the credit tightening measures announced by the Royal Commission. The UBS forecas",
+      "ft_response": "Sentiment: negative\nDirection: Credit tightening signals weigh on the economy\nAssessment: The article highlights a clear divergence between the RBA's cautious stance and the market's robust performance, suggesting a potential disconnect between monetary policy and real-world economic indicators. Thi",
+      "base_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.317,
+        "length_score": 1.0,
+        "composite": 0.305
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.1,
+        "macro_keywords": 0.3,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.125,
+        "expected_overlap": 0.439,
+        "length_score": 1.0,
+        "composite": 0.362
+      }
+    },
+    {
+      "prompt": "Date: 2016-09-10\nRBA cash rate: 1.50%\nAFR Headline: Minutes matter in a competitive market\nArticle: Offers A shortage of prestige homes means pressure is intense for buyers and sellers, writes Duncan ",
+      "expected": "Sentiment: mixed\nDirection: Property sector strength contrasts with broader economic stagnation\nAssessment: The article highlights intense competition and price premiums in elite Sydney and Melbourne ",
+      "base_response": "Based on the provided information, here's an assessment of the market sentiment and likely ASX impact:\n\n**Market Sentiment:**\n\n* **Strong Demand:** The article highlights a shortage of prestige homes, with buyers and sellers under intense pressure. Properties in highly sought-after postcodes in Sydn",
+      "ft_response": "Sentiment: positive\nDirection: Upside for property developers and construction stocks\nAssessment: The article highlights strong demand for high-end prestige homes, indicating robust supply and pricing power for major developers. This positive momentum supports continued growth and profitability for ",
+      "base_scores": {
+        "sentiment_keywords": 0.0,
+        "macro_keywords": 0.1,
+        "technical_keywords": 0.0,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.3,
+        "length_score": 1.0,
+        "composite": 0.26
+      },
+      "ft_scores": {
+        "sentiment_keywords": 0.2,
+        "macro_keywords": 0.2,
+        "technical_keywords": 0.25,
+        "risk_keywords": 0.0,
+        "expected_overlap": 0.3,
+        "length_score": 0.8875,
+        "composite": 0.341
+      }
+    }
+  ]
+}

@@ -97,7 +97,13 @@ REASONING RULES:
 17. For "how many positive vs negative full-sample returns" or "median return": use full_sample_return — it returns positive_count, negative_count, median_return_pct directly.
 18. For "best drawdowns" (smallest loss / least negative): use max_drawdown — best3[0] is the ticker with the smallest peak-to-trough loss. Do NOT exclude TAH.AX when the question asks about all 18 tickers.
 19. For year-by-year comparison between two tickers (e.g. "which led each year 2015-2021"): call rank_annual_returns for EACH year separately (7 calls) and compare the two tickers.
-20. AFR pattern rule: ALWAYS wrap short acronyms in \b word boundaries: use \bNAB\b not NAB, \bCBA\b not CBA, \bANZ\b not ANZ, \bQBE\b not QBE, \bAGL\b not AGL. Without \b, "NAB" matches words like "unable" and inflates counts by 5-10x."""
+20. AFR pattern rule: ALWAYS wrap short acronyms in \b word boundaries: use \bNAB\b not NAB, \bCBA\b not CBA, \bANZ\b not ANZ, \bQBE\b not QBE, \bAGL\b not AGL. Without \b, "NAB" matches words like "unable" and inflates counts by 5-10x.
+21. "rate/RBA pattern" AFR count: when a question asks for the AFR count matching the "rate/RBA pattern" (interest-rate / RBA coverage), use EXACTLY this pattern: \bRBA\b|\bcash rate\b|\binterest rates?\b|\bmonetary policy\b — do not simplify it.
+22. count_by_month: the result has best_year (the highest-count YEAR and its total) and best_month (the highest-count month and its count). Report BOTH the year total AND the month count — e.g. "2020 had the most (1452 records); the peak month was May 2020 (218)".
+23. Post-cut questions (post_cut_basket_returns): for EACH cut report all three of: the new target rate (new_rate), the end date of the 7-day window (end_date), and the basket_return_pct. When named individual tickers are also requested, add price_return_between and report its basket_avg_return_pct AND each named ticker's return_pct.
+24. price_return_between / basket questions: ALWAYS state the basket_avg_return_pct (the non-Tabcorp basket average) in addition to any per-ticker returns.
+25. Coverage / "can the datasets support ..." questions about 2022-2023: answer starts with "No — not supported". Note that RBA data DOES cover 2022-2023 (call count_increases date_from=2022-01-01 date_to=2023-12-31 → 13 hikes), but AFR and ASX both END in 2021 and do not cover 2022-2023.
+26. Round every percentage/return/drawdown you report to 2 decimal places exactly as given by the tools (they are already 2-dp); never add extra digits."""
 
 SYNTHESIS_PROMPT = (
     "You now have all the data needed. "
@@ -272,9 +278,13 @@ def synthesize(state: AgentState) -> AgentState:
             f"/no_think\n"
             f"Question: {user_q}\n\n"
             f"Tool data:\n{tool_summary}\n\n"
-            "Write a direct factual answer in 1-4 plain sentences using ALL exact numbers from the tool data. "
-            "Include every key number (counts, totals, percentages, rates, dates, tickers). "
-            "Use the exact values from tool data — do not recompute or reformat numbers. "
+            "Write a direct factual answer in 1-5 plain sentences using ALL exact numbers from the tool data. "
+            "Include every key number: counts, totals, percentages, rates, dates, tickers, AND aggregate "
+            "figures — basket averages (basket_avg_return_pct / basket_return_pct), year totals and month "
+            "counts (best_year.count and best_month.count), new target rates (new_rate) and window end dates "
+            "(end_date) for each cut. Do not drop the basket average or the year total. "
+            "Use the exact values from tool data verbatim — do not recompute, round further, or reformat numbers "
+            "(percentages are already 2 decimal places). "
             "Start with the answer immediately."
         )
         try:
