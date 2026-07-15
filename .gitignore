@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# Local tooling / editor / OS
+.claude/
+.vscode/
+.idea/
+.DS_Store
+
+# Secrets / local env (never commit endpoints-with-keys)
+.env
+.env.*
+*.key
+
+# Organizer-supplied datasets — do NOT commit or redistribute
+data/
+HackathonDataset/
+*.jsonl
+
+# Model weights / adapters / checkpoints
+models/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+hf_adapter/
+
+# Logs — keep the folder, ignore bulky run logs
+logs/*
+!logs/.gitkeep

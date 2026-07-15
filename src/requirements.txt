@@ -1,0 +1,20 @@
+# Agent core (Stage 2)
+langgraph>=0.2
+openai>=1.30
+
+# UI + mock server (Stages 4 / offline harness)
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.6
+
+# Skills
+pdfplumber>=0.11
+
+# Stage 3 — MCP
+mcp>=1.0
+
+# Real RAG backend (optional offline — fixture fallback used when QDRANT_URL unset)
+qdrant-client>=1.9
+
+# Agent-consumes-MCP path (integ week; version-align with the Day-2 LangChain requirements)
+# langchain-mcp-adapters>=0.1

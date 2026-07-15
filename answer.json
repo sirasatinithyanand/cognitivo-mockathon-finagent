@@ -1,0 +1,11 @@
+{
+  "answer": "41 of the 175 decision records changed the rate: 20 increases and 21 decreases.",
+  "steps": 3,
+  "tool_trace": [
+    {
+      "tool": "query_rba",
+      "args": {"filter": "Change % points != 0"},
+      "result": "41 rows returned: 20 positive, 21 negative"
+    }
+  ]
+}

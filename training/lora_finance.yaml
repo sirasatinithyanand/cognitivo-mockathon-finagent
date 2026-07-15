@@ -1,0 +1,74 @@
+# NeMo LoRA SFT config for Llama-3_3-Nemotron-Super-49B
+# Australian financial agent finetuning
+# 2-node DGX Spark GB10 cluster (TP=2)
+
+trainer:
+  num_nodes: 2
+  devices: 1
+  accelerator: gpu
+  precision: bf16-mixed
+  max_steps: 1000
+  val_check_interval: 100
+  log_every_n_steps: 10
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 8
+
+exp_manager:
+  exp_dir: /models/checkpoints/nemotron-finance-lora
+  name: nemotron-finance-lora
+  create_tensorboard_logger: true
+  create_checkpoint_callback: true
+  checkpoint_callback_params:
+    save_top_k: 3
+    monitor: val_loss
+    mode: min
+    save_last: true
+
+model:
+  restore_from_path: /models/Llama-3_3-Nemotron-Super-49B-v1.nemo
+
+  # Multi-node tensor parallelism
+  tensor_model_parallel_size: 2
+  pipeline_model_parallel_size: 1
+
+  # LoRA config
+  peft:
+    peft_scheme: lora
+    lora_tuning:
+      adapter_dim: 32          # LoRA rank — increase to 64 for better quality
+      adapter_dropout: 0.05
+      alpha: 64                # adapter_dim * 2 is a safe default
+      target_modules:
+        - q_proj
+        - v_proj
+        - k_proj
+        - o_proj
+
+  # Training
+  optim:
+    name: distributed_fused_adam
+    lr: 1e-4
+    weight_decay: 0.01
+    betas: [0.9, 0.98]
+    sched:
+      name: CosineAnnealing
+      warmup_steps: 50
+      min_lr: 1e-5
+
+  # Data
+  data:
+    train_ds:
+      file_path: /data/train.jsonl
+      max_seq_length: 4096
+      micro_batch_size: 1
+      global_batch_size: 8
+      num_workers: 4
+      prompt_template: "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n{input}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{output}<|eot_id|>"
+
+    validation_ds:
+      file_path: /data/val.jsonl
+      max_seq_length: 4096
+      micro_batch_size: 1
+      global_batch_size: 8
+      num_workers: 4
+      prompt_template: "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n{input}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{output}<|eot_id|>"

@@ -1,0 +1,187 @@
+[
+  {
+    "id": "fin-001",
+    "text": "BHP half-year results: underlying EBITDA of US$13.9bn, net debt within target range. Management flags iron ore price sensitivity and notes exposure to interest rate movements on the balance sheet refinancing due next year.",
+    "source": "BHP-HY-report.pdf p.4",
+    "metadata": {
+      "corpus": "finance",
+      "ticker": "BHP",
+      "type": "filing"
+    }
+  },
+  {
+    "id": "fin-002",
+    "text": "RBA statement: the cash rate target was held at 4.35 percent. The Board judges inflation is returning to the 2-3 percent band but remains alert to upside risks; the path of interest rates will depend on incoming data.",
+    "source": "RBA-monetary-policy-statement.txt",
+    "metadata": {
+      "corpus": "finance",
+      "type": "rates"
+    }
+  },
+  {
+    "id": "fin-003",
+    "text": "Market news: BHP announced a further US$500m investment in its Pilbara iron ore automation program, expecting unit cost reductions from FY27. Analysts view the capital allocation as defensive against a softening ore price outlook.",
+    "source": "asx-news-feed-2026-06-28.json",
+    "metadata": {
+      "corpus": "finance",
+      "ticker": "BHP",
+      "type": "news"
+    }
+  },
+  {
+    "id": "fin-004",
+    "text": "Product disclosure statement excerpt: the fund's diversified strategy allocates 40 percent to Australian equities with a materials-sector overweight, noting concentration risk when single-name holdings exceed 8 percent of portfolio value.",
+    "source": "fund-PDS-2026.pdf p.12",
+    "metadata": {
+      "corpus": "finance",
+      "type": "policy"
+    }
+  },
+  {
+    "id": "law-001",
+    "text": "Modern Award MA000004 (General Retail Industry Award): casual employees are entitled to a 25 percent loading on the ordinary hourly rate, with penalty rates for work after 6pm and on weekends as set out in clause 23.",
+    "source": "MA000004-general-retail.pdf cl.23",
+    "metadata": {
+      "corpus": "finance",
+      "type": "award"
+    }
+  },
+  {
+    "id": "law-002",
+    "text": "Superannuation guarantee ruling: employers must contribute 12 percent of ordinary time earnings from 1 July 2025. Failure to remit by the quarterly deadline triggers the superannuation guarantee charge including interest and administration components.",
+    "source": "super-guarantee-policy.txt",
+    "metadata": {
+      "corpus": "finance",
+      "type": "super"
+    }
+  },
+  {
+    "id": "law-003",
+    "text": "Caselaw summary: in a 2024 Fair Work Commission decision, an employee misclassified as a casual over four years was found entitled to backdated annual leave; the Commission applied the substance-over-form test to the employment relationship.",
+    "source": "fwc-2024-casual-misclassification.txt",
+    "metadata": {
+      "corpus": "finance",
+      "type": "caselaw"
+    }
+  },
+  {
+    "id": "afr-20150106",
+    "text": "Small lift on slow trading. The Australian sharemarket has finished the second trading day of the year up slightly, as thin volumes \u2013 thanks to many traders enjoying holidays \u2013 leave the bourse with a lack of conviction to move. The Australian sharemarket has finished the second trading day of the year up slightly, as thin volumes \u2013 thanks to many traders enjoying holidays \u2013 leave the bourse with a lack of conviction to move.\n\nThe benchmark S&P/ASX 200 Index added 14.4 points, or 0.3\u00a0per cent, to 5450.3, while the broader All Ordinaries Index gained 14.5 points, or 0.3\u00a0per cent to 5429.5.\n\n\"The volumes aren't there, the bid offers are pretty light. We saw the market open negatively, which was a little bit of a surprise because Wall Street did pretty much nothing on \u00adFriday,\" said Quay Equities head of trading Tristan ",
+    "source": "AFR 20150106",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20150106",
+      "headline": "Small lift on slow trading"
+    }
+  },
+  {
+    "id": "afr-20150626",
+    "text": "PORTRAIT. The architect with a soft spot for public buildings was in his element working on Australia\u2019s sentimental favourite, writes Pip Coates. The architect with a soft spot for public buildings was in his element working on Australia\u2019s sentimental favourite, writes Pip Coates.\n\nWhen tasked with redesigning the Sydney Opera House\u2019s flagship restaurant space, the temptation could be to try to leave a mark.\n\nBut Sydney architect Tim Greer reckons there\u2019s no room \u2013 nor public appetite \u2013 for ego where such a significant and much revered building is concerned.\n\n\u201cEverybody \u2013 except my late aunt \u2013 loves the Opera House,\u201d laughs Greer, who first set eyes on the J\u00f8rn Utzon-designed building in 1986, two years before he moved to Australia from",
+    "source": "AFR 20150626",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20150626",
+      "headline": "PORTRAIT"
+    }
+  },
+  {
+    "id": "afr-20151222",
+    "text": "Business blasts IR blueprint. Business has blasted the Productivity Commission's proposed blueprint for the nation's workplace system as an \"opportunity lost\", with BHP Billiton leading the charge to urge Malcolm Turnbull to seek a mandate for more ambitious policy changes at next year's federal election. Business has blasted the Productivity Commission's proposed blueprint for the nation's workplace system as an \"opportunity lost\", with BHP Billiton leading the charge to urge Malcolm Turnbull to seek a mandate for more ambitious policy changes at next year's federal election.\n\nBut as unions promised a multimillion-dollar marginal seats campaign on workplace relations, the Coalition refused to commit to supporting any of the recommendation's in the commission's final report into the workplace relations framework, saying it will consult further before considering whether to seek voter backing fo",
+    "source": "AFR 20151222",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20151222",
+      "headline": "Business blasts IR blueprint"
+    }
+  },
+  {
+    "id": "afr-20160610",
+    "text": ".  ",
+    "source": "AFR 20160610",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20160610",
+      "headline": ""
+    }
+  },
+  {
+    "id": "afr-20161213",
+    "text": "Brandis 'not at liberty' on new role.  Attorney-General George Brandis says he is \"not at liberty\" to say whether he is taking up a diplomatic or judicial role in the near future and denied that conflict over a High Court case was the cause of a breakdown of his relationship with former solicitor-general Justin Gleeson.\n\nFreshly returned from a visit to London and Paris, Senator Brandis was asked about his plans by a Senate committee.\n\nThere has been considerable speculation that Senator Brandis will replace Alexander Downer as High Commissioner to London next year, after a series of mishaps have left him as a liability within the ",
+    "source": "AFR 20161213",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20161213",
+      "headline": "Brandis 'not at liberty' on new role"
+    }
+  },
+  {
+    "id": "afr-20170617",
+    "text": "Downer closing in on target in bid for Spotless.  Downer EDI has secured 33 per cent of Spotless as the contractor's hostile $1.2 billion takeover bid for the services group picks up steam ahead of the bid's closure at the end of the month.\n\nBut the chief executive of Spotless, Martin Sheppard, said on Friday morning that he was just getting on with normal day-to-day operations and not being distracted as the bid process headed to a crucial point.\n\n\"We are running the business as if we didn't have the distraction of Downer at all,\" Mr Sheppard said.\n\nThe mood inside Spotless at its Melbourne headquarters was still upbeat and people were going",
+    "source": "AFR 20170617",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20170617",
+      "headline": "Downer closing in on target in bid for Spotless"
+    }
+  },
+  {
+    "id": "afr-20171215",
+    "text": "NAB buckles down for an 'unwarranted' bank probe.  National Australia Bank chairman Ken Henry is preparing for an unwarranted but necessary banking royal commission, which analysts tip might end a golden era of Australian banking.\n\nThe Hayne royal commission into the misconduct of financial institutions is needed to put an end to the political jostling that has plagued the sector, Mr Henry is expected to tell shareholders at the bank's annual general meeting on Friday.\n\nThe commission was unwarranted but required to restore trust, respect and confidence, he will say.\n\nNAB chief executive Andrew Thorburn will tell shareholders that the royal co",
+    "source": "AFR 20171215",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20171215",
+      "headline": "NAB buckles down for an 'unwarranted' bank probe"
+    }
+  },
+  {
+    "id": "afr-20180629",
+    "text": "Tokyo Drift.  The global capital of Michelin stars has become the ultimate arena for Australian chefs looking to step up a level\n\nThe global capital of Michelin stars has become the ultimate arena for Australian chefs looking to step up a level.   A winter\u2019s night in Healesville, Victoria. With Led Zeppelin on the record player, three friends enjoy shaved truffles atop fresh pasta washed down with a lot of Barolo \u2013 and hatch an outlandish plan. They will open a restaurant with only these elements: the pasta, the truffles, the wine, and the Led Zeppelin. \u201cIt was a joke for a while,\u201d says Sarah Crago, \u201cbut th",
+    "source": "AFR 20180629",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20180629",
+      "headline": "Tokyo Drift"
+    }
+  },
+  {
+    "id": "afr-20181207",
+    "text": "End may be near for rate tightening.  Disappointing economic data and a more dovish tone from the Bank of Canada may signal that the end of the global rate tightening cycle is approaching.\n\nThe Bank of Canada turned dovish on Wednesday, when it kept its key cash rate on hold at 1.75 per cent, flagging concerns with falling oil prices, slowing domestic growth and risks to global growth on the back of trade disputes. If the mood in Canada is reflected elsewhere, as economists suggest it may, the same could be heard from the Reserve Bank of Australia in 2019.\n\n\"I think the more dovish tone you're getting is going to factor into the R",
+    "source": "AFR 20181207",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20181207",
+      "headline": "End may be near for rate tightening"
+    }
+  },
+  {
+    "id": "afr-20190611",
+    "text": "Victorian Liberals face critical vote on future.  The Liberal Party's least-successful division, Victoria, will this weekend choose between a 62-year-old member of the political establishment and a 40-year-old challenger for the party presidency, a position that could prove pivotal in shaping politics in the Labor stronghold.\n\nIn a contest that epitomises the chaotic and unpredictable dynamics of the Victorian Liberals, engineer Greg Hannan hopes to defeat interim president and former Victorian attorney-general Robert Clark at a gathering of some 1000 Liberal members at Flemington Racecourse on Saturday.\n\nA grandson of one of prime minister R",
+    "source": "AFR 20190611",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20190611",
+      "headline": "Victorian Liberals face critical vote on future"
+    }
+  },
+  {
+    "id": "afr-20191213",
+    "text": ".  The Australian Financial Review Business Person of the Year, Paul Perreault, will this year spend $US950 million ($1.4 billion) on research and development as part of global blood products group CSL's long-term growth strategy.\n\nMr Perreault, who was appointed chief executive in July 2013, has put capital investment ahead of dividend payments and share buybacks.\n\nThe result is a high-growth company with a strong pipeline of new products, an aggressive international expansion plan and a suite of world-class manufacturing facilities in Australia, Switzerland, Germany, the United Kingdom and the ",
+    "source": "AFR 20191213",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20191213",
+      "headline": ""
+    }
+  },
+  {
+    "id": "afr-20200629",
+    "text": "WiseTech boss-backed music platform readies ASX listing.  US-based music licensing platform Songtradr is cranking up the volume on a run at the ASX boards.\n\nStreet Talk understands Songtradr and its adviser Blackpeak Capital have been booking in meetings with Australian investors for a pre-IPO funding round, in advance of a run at the local bourse in the second quarter of 2021.\n\nThe company - which counts WiseTech chief executive Richard White as its biggest shareholder outside of its founder - was looking to raise $US30 million ($43.6 million), according to a slide deck that's in front of potential investors.\n\nSongtradr is a music licensing platform",
+    "source": "AFR 20200629",
+    "metadata": {
+      "corpus": "afr",
+      "date": "20200629",
+      "headline": "WiseTech boss-backed music platform readies ASX listing"
+    }
+  }
+]
