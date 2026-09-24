@@ -1,4 +1,4 @@
-# Cognitivo Mock Hackathon — Team-01 Financial Agent (finagent)
+# Cognitivo Mock Hackathon — Team-01 Financial Agent (FinAgent)
 
 An evidence-grounded market-signal agent that answers questions over three approved
 Australian financial datasets (**RBA** cash-rate decisions, **ASX** 18-stock prices,
